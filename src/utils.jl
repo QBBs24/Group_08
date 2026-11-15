@@ -1,10 +1,10 @@
 module Utils
 using ..Structures
-export load_veritcal_db, save_to_spmf
+export load_vertical_db, save_to_spmf
 
 # Hàm đọc file và biến đổi từ Itemset sang Tidset
 
-function load_vetical_db(filepath::String)::Tuple{Dict{Int, Vector{Int}}, Int}
+function load_vertical_db(filepath::String)::Tuple{Dict{Int, Vector{Int}}, Int}
     vertical_db = Dict{Int, Vector{Int}}()
     tid = 0
     open(filepath, "r") do io
@@ -12,7 +12,7 @@ function load_vetical_db(filepath::String)::Tuple{Dict{Int, Vector{Int}}, Int}
         # Đọc từng hàng trong file data
         for line in eachline(io)
             s = strip(line)            # Loại bỏ khoảng trắng
-            isEmpty(s) && continue     # Nếu hàng đó trống => Bỏ qua
+            (isempty(s) || startswith(s, "@") || startswith(s, "#") || startswith(s, "%")) && continue     # Nếu hàng đó trống, invalid format => Bỏ qua
             tid += 1                   # Transaction ID tăng theo thứ tự số nguyên => Biến đếm
 
             seen_in_tx = Set{Int}()                 # Loại bỏ các item trùng nhau bằng Set
@@ -35,7 +35,7 @@ end
 function save_to_spmf(filepath::String, results::Vector{FrequentItemset})
     open(filepath, "w") do io                                               # Sử dụng io dạng "w" để viết file                                            
         for fi in results                                                   # Duyệt qua các FrequentItemset đúc kết ra sau khi chạy thuật toán
-            println(io, join(fi.items, " "), " #SUP: ", fi.support)         # In ra các items của Itemset đó cùng với support count.
+            println(io, join(fi.item, " "), " #SUP: ", fi.support)         # In ra các items của Itemset đó cùng với support count.
         end
     end
 end

@@ -7,33 +7,31 @@ export run_eclat_baseline
 function intersect_sorted(a::Vector{Int}, b::Vector{Int})::Vector{Int}
     # Khai báo các biến dữ liệu cần thiết
     res = Int[]
-    sizeint!(res, min(length(a), length(b)))    # Độ dài của res là min giữa độ dài của a và b
+    sizehint!(res, min(length(a), length(b)))    # Độ dài của res là min giữa độ dài của a và b
     i, j = 1, 1
     len_a, len_b = length(a), length(b)
 
-    @inbound while i <= len_a && j <= len_b     # Duyệt song song 2 tidset a và b
+    @inbounds while i <= len_a && j <= len_b     # Duyệt song song 2 tidset a và b
         va, vb = a[i], b[j]                     # Lấy 2 phần tử mà 2 con trỏ đang chỉ
-        if (va == vb)                           # Nếu 2 phần tử bằng nhau
+        if va == vb                             # Nếu 2 phần tử bằng nhau
             push!(res, va)                      # Lấy 1 trong 2 phần tử
             i += 1                              # Rồi đẩy cả 2 index lên
             j += 1
 
-        elseif va < vb:                         # Nếu phần tử a < phần tử b
-            push!(res, va)                      # Thêm phần tử a vào res
+        elseif va < vb                          # Nếu phần tử a < phần tử b 
             i += 1                              # Đẩy index của a lên để xét phần tử mới
         
-        else:
-            push!(res, vb)                      # Ngược lại nếu b < a
-            j += 1                              # Thêm item của tidset b vào res và đẩy index lên 1
+        else                                    # Ngược lại nếu b < a
+            j += 1                              # Đẩy index b lên 1 để xét phần tử mới
         end                                     
     end
     return res
 end
 
 function eclat_dfs!(
-    prefix::Vector{int}                                                     # Tiền tố tid (VD: 12, 13,...)
-    nodes::Vector{EclatNode}                                                # Các node con cần duyệt
-    min_sup_count::Int                                                      # Độ support count tối thiểu
+    prefix::Vector{Int},                                                     # Tiền tố tid (VD: 12, 13,...)
+    nodes::Vector{EclatNode},                                                # Các node con cần duyệt
+    min_sup_count::Int,                                                      # Độ support count tối thiểu
     results::Vector{FrequentItemset}                                        # Các Frequent Itemsets rút ra được
 )
     n = length(nodes)                                                       # Lấy số con của node hiện tại
@@ -44,9 +42,9 @@ function eclat_dfs!(
 
         next_nodes = EclatNode[]                                            # Tạo node tiếp theo
         for j in (i + 1):n                                                  # Lấy node con tiếp theo
-            node_j = node[j]                                                # Gán node con là node_j
+            node_j = nodes[j]                                                # Gán node con là node_j
             same_tids = intersect_sorted(node_i.tidset, node_j.tidset)      # Giao tidset node hiện tại với tidset node tiếp theo => Những tid ở cả 2 node
-            if (length(same_tids) > min_sup_count)                          # Xét tidset giao của node_i và node_j có phổ biến hay không
+            if (length(same_tids) >= min_sup_count)                          # Xét tidset giao của node_i và node_j có phổ biến hay không
                 push!(next_nodes, EclatNode(node_j.item, same_tids))        # Nếu có, thêm node mới gồm cả 2 tiền tố i và j vào mảng next_nodes 
                                                                             # => Tạo ra các k-itemsets phổ biến
             end
@@ -59,9 +57,9 @@ function eclat_dfs!(
 end
 
 function run_eclat_baseline(
-    vertical_db::Dict{Int, Vector{Int}}                 # Lấy bảng data dọc mới tạo được
+    vertical_db::Dict{Int, Vector{Int}},                 # Lấy bảng data dọc mới tạo được
     num_tx::Int,                                        # Số transaction trong bảng
-    minsup::Float64                                     # Phần trăm support tối thiểu
+    minsup::Float64,                                     # Phần trăm support tối thiểu
 )::Vector{FrequentItemset}                              # Trả về 1 mảng gồm những Itemset phổ biến
                         
     min_sup_count = ceil(Int, minsup * num_tx)          # Tính min_sup_count bằng nhân số transaction với minsup
@@ -76,6 +74,8 @@ function run_eclat_baseline(
     sort!(freq_1, by = x -> (length(x.tidset), x.item)) # Sắp xếp các 1-itemset theo độ phổ biến tăng dần
 
     eclat_dfs!(Int[], freq_1, min_sup_count, results)   # Chạy DFS đệ quy để tìm các k-itemset phổ biến
+    
+    return results
 end
 
 end # module

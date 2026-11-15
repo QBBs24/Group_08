@@ -8,7 +8,7 @@ struct EclatNode
 end
 
 struct FrequentItemset
-    item::Vector{Int}
+    items::Vector{Int}
     support::Int
 end
 
