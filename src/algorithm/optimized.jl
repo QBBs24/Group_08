@@ -58,5 +58,4 @@ function run_eclat_optimized(vertical_db::Dict{Int, Vector{Int}}, num_tx::Int, m
     return results
 end
 
-
 end # module
