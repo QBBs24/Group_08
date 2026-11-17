@@ -1,13 +1,13 @@
 module OptimizedEclat
 
-using..Structures
+using ..Structures
 export run_eclat_optimized
 
 function intersect_bitset(a::BitVector, b::BitVector)::Tuple{BitVector, Int}
     res = BitVector(undef, length(a))
     ac, bc, rc = a.chunks, b.chunks, res.chunks
     sup = 0
-    @inbound @simd for k in eachindex(rc)
+    @inbounds @simd for k in eachindex(rc)
         w = ac[k] & bc[k]
         rc[k] = w
         sup += count_ones(w)
@@ -15,14 +15,14 @@ function intersect_bitset(a::BitVector, b::BitVector)::Tuple{BitVector, Int}
     return res, sup
 end
 
-function eclat_bit_dfs(prefix::Vector{Int}, nodes::Vector{BitEclatNode}, min_sup_count::Int, results::Vector{FrquentItemset})
+function eclat_bit_dfs(prefix::Vector{Int}, nodes::Vector{BitEclatNode}, min_sup_count::Int, results::Vector{FrequentItemset})
     n = length(nodes)
     for i in 1:n
         node_i = nodes[i]
         new_prefix = vcat(prefix, node_i.item)
         push!(results, FrequentItemset(new_prefix, node_i.support))
 
-        next_nodes = BitEclatNode
+        next_nodes = BitEclatNode[]
         for j in (i + 1):n
             node_j = nodes[j]
             common_bits, sup = intersect_bitset(node_i.bitset, node_j.bitset)
@@ -45,7 +45,7 @@ function run_eclat_optimized(vertical_db::Dict{Int, Vector{Int}}, num_tx::Int, m
     for (item, tids) in vertical_db
         sup = length(tids)
         if sup >= min_sup_count
-            bit_vector = false(num_tx)
+            bit_vector = falses(num_tx)
             @inbounds for tid in tids
                 bit_vector[tid] = true
             end
