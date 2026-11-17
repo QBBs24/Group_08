@@ -35,7 +35,7 @@ end
 function save_to_spmf(filepath::String, results::Vector{FrequentItemset})
     open(filepath, "w") do io                                               # Sử dụng io dạng "w" để viết file                                            
         for fi in results                                                   # Duyệt qua các FrequentItemset đúc kết ra sau khi chạy thuật toán
-            println(io, join(fi.item, " "), " #SUP: ", fi.support)         # In ra các items của Itemset đó cùng với support count.
+            println(io, join(fi.items, " "), " #SUP: ", fi.support)         # In ra các items của Itemset đó cùng với support count.
         end
     end
 end
