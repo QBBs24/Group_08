@@ -169,7 +169,7 @@ function run_scalability_experiment(dataset::String = "retail.txt", minsup::Floa
 end
 
 # THỰC NGHIỆM 6: Ảnh hưởng của độ dài giao dịch trung bình (CSDL tổng hợp)
-function run_tx_length_experiment(; num_tx::Int = 30_000, num_items::Int = 500, minsup::Float64 = 0.05)
+function run_tx_length_experiment(; num_tx::Int = 30_000, num_items::Int = 2000, minsup::Float64 = 0.05)
     Random.seed!(42)
     lengths  = [10, 20, 30, 40, 50]
     len_rows = NamedTuple[]

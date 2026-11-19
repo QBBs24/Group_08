@@ -1,0 +1,7 @@
+>/G:/data_mining/Group_08/spmf.jar
+=============  ECLAT v2.65 - STATS =============
+ Transactions count from database : 100000
+ Frequent itemsets count : 385
+ Total time ~ 659 ms
+ Maximum memory usage : 88.69010925292969 mb
+===================================================
