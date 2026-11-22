@@ -130,7 +130,7 @@ function run_market_basket_analysis(;
     minsup::Float64 = 0.01,
     minconf::Float64 = 0.30,
     top_k::Int = 10,
-    output_dir::String = joinpath(@__DIR__, "..", "..", "results")
+    output_dir::String = joinpath(@__DIR__, "..", "..", "results", "app1")
 )
     println("=== ỨNG DỤNG 1: PHÂN TÍCH GIỎ HÀNG (MARKET BASKET ANALYSIS) ===")
     vdb, num_tx, id_to_item, tx_ints = prepare_groceries_vertical_db(input_path)

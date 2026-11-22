@@ -19,7 +19,7 @@ const SPMF_JAR      = joinpath(REPO_ROOT, "spmf.jar")
 const TOY_DIR       = joinpath(REPO_ROOT, "data", "toy")
 const BENCHMARK_DIR = joinpath(REPO_ROOT, "data", "benchmark")
 const SPMF_REF      = joinpath(BENCHMARK_DIR, "spmf_reference")
-const RESULTS_DIR   = joinpath(REPO_ROOT, "results")
+const RESULTS_DIR   = joinpath(REPO_ROOT, "results/benchmark")
 
 # 6 mốc minsup giảm dần cho Thực nghiệm 1, 2, 3
 const BENCHMARKS = [
