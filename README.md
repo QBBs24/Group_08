@@ -6,12 +6,16 @@
 
 ## 2. Tài nguyên & Liên kết công khai
 
-- Demo notebook (Google Colab): *[Dán link GG Colab PUBLIC Face bộ `dna.csv` tại đây]*
+- Demo notebook (Google Colab): `https://colab.research.google.com/drive/1CSCRqjHDq-ORQqBkuJk3RLnu7d7sGN0b?usp=sharing`
 - Báo cáo kỹ thuật (IEEE Format): `docs/Report.pdf`
 - Nguồn dữ liệu Benchmark & Ứng dụng (Kaggle):
-    + Chess, Mushroom, Retail, T10I4D100K (Chương 2): *[Dán link công khai trên Kaggle / Hugging Face hoặc SPMF Datasets tại đây]*
-    + Groceries Dataset (Chương 3 — Ứng dụng 1): *[Dán link Kaggle/Hugging Face bộ `Groceries_dataset.csv` tại đây]*
-    + Statlog DNA Splice-Junction (Chương 3 — Ứng dụng 2): *[Dán link Kaggle/Hugging Face bộ `dna.csv` tại đây]*
+    + Chess, Mushrooms, Retail, T10I4D100K (Chương 2)
+        + Chess: `https://www.philippe-fournier-viger.com/spmf/publicdatasets/chess.txt`
+        + Mushrooms: `https://www.philippe-fournier-viger.com/spmf/publicdatasets/mushrooms.txt`
+        + Retail: `https://www.philippe-fournier-viger.com/spmf/publicdatasets/retail.txt`
+        + T10I4D100K: `https://www.philippe-fournier-viger.com/spmf/publicdatasets/T10I4D100K.txt`
+    + Groceries Dataset (Chương 3 — Ứng dụng 1): `https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset`
+    + Statlog DNA Splice-Junction (Chương 3 — Ứng dụng 2): `https://www.kaggle.com/datasets/muhammetvarl/splicejunction-gene-sequences-dataset`
 - Bài báo gốc tham chiếu:
     + Zaki, M. J., Parthasarathy, S., Ogihara, M., & Li, W. (1997). *New Algorithms for Fast Discovery of Association Rules*. KDD-97.
     + Zaki, M. J. (2000). *Scalable Algorithms for Association Mining*. IEEE Transactions on Knowledge and Data Engineering (TKDE), 12(3), 372–390.
@@ -70,23 +74,25 @@ Group_08/
 
 ## 5. Hướng dẫn chạy và Ví dụ sử dụng
 
-### a. Chạy bộ kiểm thử tự động (Unit Tests)
+### a. Chương 1: Chạy bộ kiểm thử tự động (Unit Tests)
 
 - Chạy `julia --project=. tests/test_correctness.jl`
 
-### b. Chạy thực nghiệm Benchmark (Chương 2)
+### b. Chương 2: Chạy thực nghiệm Benchmark
 
 - Đặt 4 file dữ liệu benchmark (chess.txt, mushrooms.txt, retail.txt, T10I4D100K.txt) vào data/benchmark/
 - Chạy `julia --project tests/test_benchmark.jl`
 - Kết quả thực nghiệm được xuất tự động ra 4 tệp CSV trong thư mục results/ (exp1_2_3_main.csv, exp4_memory.csv, exp5_scalability.csv, exp6_tx_length.csv).
 
-### c. Chạy Ứng dụng 1 — Phân tích giỏ hàng (Market Basket Analysis)
+### c. Chương 3: Ứng dụng
+
+#### Chạy Ứng dụng 1 — Phân tích giỏ hàng (Market Basket Analysis)
 
 - Cú pháp: *julia --project=. src/applications/market_basket.jl <đường_dẫn_csv> <minsup> <minconf>*
 - Ví dụ: `julia --project=. src/applications/market_basket.jl data/apps/Groceries_dataset.csv 0.002 0.10`
 - Ví dụ kết quả đầu ra: Từ 14,963 giỏ hàng với 167 mặt hàng, hệ thống khai thác được 330 tập phổ biến và xuất bảng Top luật kết hợp theo chỉ số Lift (cao nhất là {frankfurter} => {other vegetables} với Lift = 1.1161, Confidence = 13.63%) ra results/app1_top10_rules.csv.
 
-### d. Chạy Ứng dụng 2 — Khai thác mẫu trình tự DNA Splice-Junction
+#### Chạy Ứng dụng 2 — Khai thác mẫu trình tự DNA Splice-Junction
 
 - Cú pháp: *julia --project=. src/applications/bio_mining.jl <đường_dẫn_dna_csv>*
 - Ví dụ: `julia --project=. src/applications/bio_mining.jl data/apps/dna.csv`

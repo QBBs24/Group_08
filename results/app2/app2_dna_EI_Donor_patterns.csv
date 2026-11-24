@@ -1,0 +1,45 @@
+class,rank,length,pattern,support_count,support_rel
+EI_Donor,1,2,"{Pos31=G, Pos32=T}",759,0.989570
+EI_Donor,2,2,"{Pos31=G, Pos35=G}",657,0.856584
+EI_Donor,3,3,"{Pos31=G, Pos32=T, Pos35=G}",652,0.850065
+EI_Donor,4,2,"{Pos32=T, Pos35=G}",652,0.850065
+EI_Donor,5,2,"{Pos30=G, Pos31=G}",626,0.816167
+EI_Donor,6,3,"{Pos30=G, Pos31=G, Pos32=T}",619,0.807040
+EI_Donor,7,2,"{Pos30=G, Pos32=T}",619,0.807040
+EI_Donor,8,2,"{Pos31=G, Pos34=A}",553,0.720991
+EI_Donor,9,3,"{Pos31=G, Pos32=T, Pos34=A}",550,0.717080
+EI_Donor,10,2,"{Pos32=T, Pos34=A}",550,0.717080
+EI_Donor,11,3,"{Pos30=G, Pos31=G, Pos35=G}",520,0.677966
+EI_Donor,12,2,"{Pos30=G, Pos35=G}",520,0.677966
+EI_Donor,13,4,"{Pos30=G, Pos31=G, Pos32=T, Pos35=G}",515,0.671447
+EI_Donor,14,3,"{Pos30=G, Pos32=T, Pos35=G}",515,0.671447
+EI_Donor,15,3,"{Pos31=G, Pos34=A, Pos35=G}",492,0.641460
+EI_Donor,16,2,"{Pos34=A, Pos35=G}",492,0.641460
+EI_Donor,17,4,"{Pos31=G, Pos32=T, Pos34=A, Pos35=G}",489,0.637549
+EI_Donor,18,3,"{Pos32=T, Pos34=A, Pos35=G}",489,0.637549
+EI_Donor,19,2,"{Pos29=A, Pos31=G}",448,0.584094
+EI_Donor,20,3,"{Pos29=A, Pos31=G, Pos32=T}",445,0.580183
+EI_Donor,21,2,"{Pos29=A, Pos32=T}",445,0.580183
+EI_Donor,22,3,"{Pos30=G, Pos31=G, Pos34=A}",425,0.554107
+EI_Donor,23,2,"{Pos30=G, Pos34=A}",425,0.554107
+EI_Donor,24,4,"{Pos30=G, Pos31=G, Pos32=T, Pos34=A}",422,0.550196
+EI_Donor,25,3,"{Pos30=G, Pos32=T, Pos34=A}",422,0.550196
+EI_Donor,26,3,"{Pos29=A, Pos30=G, Pos31=G}",389,0.507171
+EI_Donor,27,2,"{Pos29=A, Pos30=G}",389,0.507171
+EI_Donor,28,4,"{Pos29=A, Pos30=G, Pos31=G, Pos32=T}",386,0.503259
+EI_Donor,29,3,"{Pos29=A, Pos30=G, Pos32=T}",386,0.503259
+EI_Donor,30,2,"{Pos31=G, Pos33=A}",377,0.491525
+EI_Donor,31,3,"{Pos31=G, Pos32=T, Pos33=A}",375,0.488918
+EI_Donor,32,2,"{Pos32=T, Pos33=A}",375,0.488918
+EI_Donor,33,4,"{Pos30=G, Pos31=G, Pos34=A, Pos35=G}",366,0.477184
+EI_Donor,34,3,"{Pos30=G, Pos34=A, Pos35=G}",366,0.477184
+EI_Donor,35,5,"{Pos30=G, Pos31=G, Pos32=T, Pos34=A, Pos35=G}",363,0.473272
+EI_Donor,36,4,"{Pos30=G, Pos32=T, Pos34=A, Pos35=G}",363,0.473272
+EI_Donor,37,3,"{Pos29=A, Pos31=G, Pos35=G}",360,0.469361
+EI_Donor,38,2,"{Pos29=A, Pos35=G}",360,0.469361
+EI_Donor,39,2,"{Pos31=G, Pos33=G}",358,0.466754
+EI_Donor,40,4,"{Pos29=A, Pos31=G, Pos32=T, Pos35=G}",357,0.465450
+EI_Donor,41,3,"{Pos29=A, Pos32=T, Pos35=G}",357,0.465450
+EI_Donor,42,3,"{Pos31=G, Pos32=T, Pos33=G}",354,0.461538
+EI_Donor,43,2,"{Pos32=T, Pos33=G}",354,0.461538
+EI_Donor,44,2,"{Pos31=G, Pos36=T}",347,0.452412

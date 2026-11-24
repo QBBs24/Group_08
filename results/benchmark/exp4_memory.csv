@@ -1,0 +1,9 @@
+implementation,dataset,minsup,peak_rss_mb
+baseline,chess.txt,0.75,224.76
+optimized,chess.txt,0.75,214.96
+baseline,mushrooms.txt,0.25,223.05
+optimized,mushrooms.txt,0.25,207.73
+baseline,retail.txt,0.005,234.29
+optimized,retail.txt,0.005,239.64
+baseline,T10I4D100K.txt,0.005,233.63
+optimized,T10I4D100K.txt,0.005,246.3

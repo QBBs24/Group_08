@@ -1,0 +1,45 @@
+class,rank,length,pattern,support_count,support_rel
+IE_Acceptor,1,2,"{Pos29=A, Pos30=G}",761,0.994771
+IE_Acceptor,2,2,"{Pos28=C, Pos30=G}",604,0.789542
+IE_Acceptor,3,3,"{Pos28=C, Pos29=A, Pos30=G}",603,0.788235
+IE_Acceptor,4,2,"{Pos28=C, Pos29=A}",603,0.788235
+IE_Acceptor,5,3,"{Pos29=A, Pos30=G, Pos31=G}",362,0.473203
+IE_Acceptor,6,2,"{Pos29=A, Pos31=G}",362,0.473203
+IE_Acceptor,7,2,"{Pos30=G, Pos31=G}",362,0.473203
+IE_Acceptor,8,2,"{Pos25=C, Pos30=G}",355,0.464052
+IE_Acceptor,9,3,"{Pos25=C, Pos29=A, Pos30=G}",354,0.462745
+IE_Acceptor,10,2,"{Pos20=T, Pos30=G}",354,0.462745
+IE_Acceptor,11,2,"{Pos25=C, Pos29=A}",354,0.462745
+IE_Acceptor,12,3,"{Pos20=T, Pos29=A, Pos30=G}",353,0.461438
+IE_Acceptor,13,2,"{Pos20=T, Pos29=A}",353,0.461438
+IE_Acceptor,14,3,"{Pos26=T, Pos29=A, Pos30=G}",349,0.456209
+IE_Acceptor,15,2,"{Pos26=T, Pos29=A}",349,0.456209
+IE_Acceptor,16,2,"{Pos26=T, Pos30=G}",349,0.456209
+IE_Acceptor,17,3,"{Pos21=T, Pos29=A, Pos30=G}",348,0.454902
+IE_Acceptor,18,2,"{Pos21=T, Pos29=A}",348,0.454902
+IE_Acceptor,19,2,"{Pos21=T, Pos30=G}",348,0.454902
+IE_Acceptor,20,2,"{Pos24=C, Pos30=G}",345,0.450980
+IE_Acceptor,21,3,"{Pos24=C, Pos29=A, Pos30=G}",344,0.449673
+IE_Acceptor,22,2,"{Pos24=C, Pos29=A}",344,0.449673
+IE_Acceptor,23,3,"{Pos19=T, Pos29=A, Pos30=G}",338,0.441830
+IE_Acceptor,24,2,"{Pos19=T, Pos29=A}",338,0.441830
+IE_Acceptor,25,2,"{Pos19=T, Pos30=G}",338,0.441830
+IE_Acceptor,26,3,"{Pos18=T, Pos29=A, Pos30=G}",337,0.440523
+IE_Acceptor,27,2,"{Pos18=T, Pos29=A}",337,0.440523
+IE_Acceptor,28,2,"{Pos18=T, Pos30=G}",337,0.440523
+IE_Acceptor,29,2,"{Pos22=T, Pos30=G}",333,0.435294
+IE_Acceptor,30,2,"{Pos22=T, Pos29=A}",332,0.433987
+IE_Acceptor,31,3,"{Pos22=T, Pos29=A, Pos30=G}",331,0.432680
+IE_Acceptor,32,2,"{Pos25=T, Pos29=A}",329,0.430065
+IE_Acceptor,33,3,"{Pos25=T, Pos29=A, Pos30=G}",328,0.428758
+IE_Acceptor,34,2,"{Pos25=T, Pos30=G}",328,0.428758
+IE_Acceptor,35,2,"{Pos23=C, Pos30=G}",323,0.422222
+IE_Acceptor,36,3,"{Pos23=C, Pos29=A, Pos30=G}",321,0.419608
+IE_Acceptor,37,2,"{Pos23=C, Pos29=A}",321,0.419608
+IE_Acceptor,38,2,"{Pos17=T, Pos29=A}",320,0.418301
+IE_Acceptor,39,2,"{Pos17=T, Pos30=G}",320,0.418301
+IE_Acceptor,40,3,"{Pos17=T, Pos29=A, Pos30=G}",319,0.416993
+IE_Acceptor,41,2,"{Pos23=T, Pos29=A}",314,0.410458
+IE_Acceptor,42,3,"{Pos23=T, Pos29=A, Pos30=G}",313,0.409150
+IE_Acceptor,43,2,"{Pos23=T, Pos30=G}",313,0.409150
+IE_Acceptor,44,2,"{Pos26=C, Pos30=G}",306,0.400000
