@@ -1,0 +1,6 @@
+dataset,fraction,num_tx,n_itemsets,load_seconds,algo_seconds,total_seconds,alloc_mb
+retail.txt,0.1,8816,692,0.0626,0.0054,0.0681,39.39
+retail.txt,0.25,22040,659,0.0649,0.0203,0.0851,73.86
+retail.txt,0.5,44081,613,0.1216,0.0215,0.1431,134.96
+retail.txt,0.75,66122,544,0.195,0.0415,0.2364,189.1
+retail.txt,1.0,88162,580,0.2434,0.0548,0.2983,264.64
