@@ -105,3 +105,9 @@ Group_08/
 - Kết quả chạy lệnh julia --project=. tests/test_correctness.jl lần cuối trước khi nộp bài:
     Test Summary:                                   | Pass  Total  Time
     Eclat Baseline & Optimized vs SPMF (5 Datasets) |   20     20  1.5s
+
+## 7. 
+julia --project=. demo.jl
+
+## 8. 
+julia --project=. tests/runtests.jl
