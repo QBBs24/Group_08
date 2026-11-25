@@ -1,0 +1,11 @@
+rank,antecedent,consequent,support_count,support,confidence,lift
+1,"curd","sausage",44,0.002941,0.087302,1.4466
+2,"frozen vegetables","sausage",31,0.002072,0.073986,1.2260
+3,"bottled beer","sausage",50,0.003342,0.073746,1.2220
+4,"frankfurter","other vegetables",77,0.005146,0.136283,1.1161
+5,"sausage","yogurt",86,0.005748,0.095238,1.1090
+6,"frozen vegetables","root vegetables",32,0.002139,0.076372,1.0978
+7,"chocolate","rolls/buns",42,0.002807,0.118980,1.0816
+8,"frozen meals","other vegetables",32,0.002139,0.127490,1.0441
+9,"meat","other vegetables",32,0.002139,0.126984,1.0400
+10,"sausage","soda",89,0.005948,0.098560,1.0150

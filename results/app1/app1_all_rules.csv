@@ -1,8 +1,16 @@
 rank,antecedent,consequent,support_count,support,confidence,lift
-1,"frankfurter","other vegetables",77,0.005146,0.136283,1.1161
-2,"chocolate","rolls/buns",42,0.002807,0.118980,1.0816
-3,"frozen meals","other vegetables",32,0.002139,0.127490,1.0441
-4,"meat","other vegetables",32,0.002139,0.126984,1.0400
-5,"ham","whole milk",41,0.002740,0.160156,1.0141
-6,"berries","other vegetables",40,0.002673,0.122699,1.0049
-7,"fruit/vegetable juice","rolls/buns",56,0.003743,0.110020,1.0001
+1,"curd","sausage",44,0.002941,0.087302,1.4466
+2,"frozen vegetables","sausage",31,0.002072,0.073986,1.2260
+3,"bottled beer","sausage",50,0.003342,0.073746,1.2220
+4,"frankfurter","other vegetables",77,0.005146,0.136283,1.1161
+5,"sausage","yogurt",86,0.005748,0.095238,1.1090
+6,"frozen vegetables","root vegetables",32,0.002139,0.076372,1.0978
+7,"chocolate","rolls/buns",42,0.002807,0.118980,1.0816
+8,"frozen meals","other vegetables",32,0.002139,0.127490,1.0441
+9,"meat","other vegetables",32,0.002139,0.126984,1.0400
+10,"sausage","soda",89,0.005948,0.098560,1.0150
+11,"ham","whole milk",41,0.002740,0.160156,1.0141
+12,"citrus fruit","yogurt",69,0.004611,0.086792,1.0106
+13,"shopping bags","root vegetables",50,0.003342,0.070225,1.0094
+14,"berries","other vegetables",40,0.002673,0.122699,1.0049
+15,"fruit/vegetable juice","rolls/buns",56,0.003743,0.110020,1.0001

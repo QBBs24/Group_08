@@ -1,8 +1,0 @@
-rank,antecedent,consequent,support_count,support,confidence,lift
-1,"frankfurter","other vegetables",77,0.005146,0.136283,1.1161
-2,"chocolate","rolls/buns",42,0.002807,0.118980,1.0816
-3,"frozen meals","other vegetables",32,0.002139,0.127490,1.0441
-4,"meat","other vegetables",32,0.002139,0.126984,1.0400
-5,"ham","whole milk",41,0.002740,0.160156,1.0141
-6,"berries","other vegetables",40,0.002673,0.122699,1.0049
-7,"fruit/vegetable juice","rolls/buns",56,0.003743,0.110020,1.0001

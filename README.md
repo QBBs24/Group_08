@@ -6,7 +6,7 @@
 
 ## 2. Tài nguyên & Liên kết công khai
 
-- Demo notebook (Google Colab): `https://colab.research.google.com/drive/1CSCRqjHDq-ORQqBkuJk3RLnu7d7sGN0b?usp=sharing`
+- Demo notebook (Google Colab): `https://colab.research.google.com/drive/1ypDhya17R0R00jJbfhUZ5GS0SjnWh0oF?usp=sharing`
 - Báo cáo kỹ thuật (IEEE Format): `docs/Report.pdf`
 - Nguồn dữ liệu Benchmark & Ứng dụng (Kaggle):
     + Chess, Mushrooms, Retail, T10I4D100K (Chương 2)
@@ -89,7 +89,7 @@ Group_08/
 #### Chạy Ứng dụng 1 — Phân tích giỏ hàng (Market Basket Analysis)
 
 - Cú pháp: *julia --project=. src/applications/market_basket.jl <đường_dẫn_csv> <minsup> <minconf>*
-- Ví dụ: `julia --project=. src/applications/market_basket.jl data/apps/Groceries_dataset.csv 0.002 0.10`
+- Ví dụ: `julia --project=. src/applications/market_basket.jl data/apps/Groceries_dataset.csv 0.002 0.07`
 - Ví dụ kết quả đầu ra: Từ 14,963 giỏ hàng với 167 mặt hàng, hệ thống khai thác được 330 tập phổ biến và xuất bảng Top luật kết hợp theo chỉ số Lift (cao nhất là {frankfurter} => {other vegetables} với Lift = 1.1161, Confidence = 13.63%) ra results/app1_top10_rules.csv.
 
 #### Chạy Ứng dụng 2 — Khai thác mẫu trình tự DNA Splice-Junction
