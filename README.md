@@ -6,7 +6,7 @@
 
 ## 2. Tài nguyên & Liên kết công khai
 
-- Demo notebook (Google Colab): `https://colab.research.google.com/drive/1ypDhya17R0R00jJbfhUZ5GS0SjnWh0oF?usp=sharing`
+- Demo notebook (Google Colab): `https://colab.research.google.com/drive/1SmBrYj9_PNzfWb3edH-lgbGdXEz52YLF?usp=sharing`
 - Báo cáo kỹ thuật (IEEE Format): `docs/Report.pdf`
 - Nguồn dữ liệu Benchmark & Ứng dụng (Kaggle):
     + Chess, Mushrooms, Retail, T10I4D100K (Chương 2)
@@ -98,16 +98,16 @@ Group_08/
 - Ví dụ: `julia --project=. src/applications/bio_mining.jl data/apps/dna.csv`
 - Ví dụ kết quả đầu ra: Giải mã 3,186 chuỗi DNA 60 vị trí thành 240 đặc trưng (Vị_trí, Nucleotide) và khai thác các motif bảo thủ đặc trưng cho ranh giới Exon–Intron ({Pos31=G, Pos32=T} đạt 99.0% support) và Intron–Exon ({Pos29=A, Pos30=G} đạt 99.5% support).
 
-### e. Mở Demo Notebook
-- Chạy `jupyter notebook notebooks/demo.ipynb`
+### e. Mở Demo Notebook (local)
+- Chạy `jupyter notebook notebooks/demo_local.ipynb`
 
 ## 6. Kết quả chạy kiểm thử (Unit Test Output)
 - Kết quả chạy lệnh julia --project=. tests/test_correctness.jl lần cuối trước khi nộp bài:
     Test Summary:                                   | Pass  Total  Time
     Eclat Baseline & Optimized vs SPMF (5 Datasets) |   20     20  1.5s
 
-## 7. 
+## 7. Chạy demo cả project
 julia --project=. demo.jl
 
-## 8. 
+## 8. Chạy bộ test kiểm thử
 julia --project=. tests/runtests.jl
